@@ -1,16 +1,14 @@
-{
-  "name": "APISIGNIA",
+  "name": "my-api",
   "version": "1.0.0",
-  "main": "api.py",
+  "description": "A Flask API using OpenCV, MediaPipe, and TensorFlow for sign language recognition.",
   "scripts": {
-    "start": "api.py"
+    "start": "vercel dev"
   },
   "dependencies": {
-    "flask" = "3.0.3",
-    "tensorflow" = "2.16.1",
-    "mediapipe" = "0.10.14",
-    "numpy" = "1.24.3",
-    "opencv" = "4.9.0",
-    "flask_restful" = "0.3.10"
+    "vercel": "^28.10.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
