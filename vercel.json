@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": ".py",
-      "use": "@vercel/node"
+      "src": "api.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
