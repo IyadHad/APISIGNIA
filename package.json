@@ -1,14 +1,19 @@
-  "name": "my-api",
-  "version": "1.0.0",
-  "description": "A Flask API using OpenCV, MediaPipe, and TensorFlow for sign language recognition.",
-  "scripts": {
-    "start": "vercel dev"
-  },
-  "dependencies": {
-    "vercel": "^28.10.1"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": ">=14.0.0"
-  }
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt"
 }
