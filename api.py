@@ -7,7 +7,7 @@ from flask import Flask,jsonify,request
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
-api = Api(app)
+#api = Api(app)
 
 mp_holistic = mp.solutions.holistic  # Holistic model
 mp_drawing = mp.solutions.drawing_utils  # Drawing utilities
@@ -96,7 +96,12 @@ class prediction(Resource):
                     #image = prob_viz(res, actions, image, colors)
             return jsonify({"signe" : sentence})
 
-api.add_resource(prediction,'/predict')
+#api.add_resource(prediction,'/predict',methods=['POST'])
+
+app.route('/prediction',methods=['POST'])
+def resultat():
+    var = prediction()
+    return var.post()
 
 if __name__ == '__main__':
     app.run(debug=False, port=8000)
