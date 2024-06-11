@@ -1,0 +1,11 @@
+{
+  "name": "APISIGNIA",
+  "version": "1.0.0",
+  "main": "api.py",
+  "scripts": {
+    "start": "nodeapi.py"
+  },
+  "dependencies": {
+    
+  }
+}
