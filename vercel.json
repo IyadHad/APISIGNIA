@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     },
     {
-      "src": "requirements.txt",
+      "src": "/vercel/path0/requirements.txt",
       "use": "@now/python",
       "config": { "pip": "pip3.9" }
     }
