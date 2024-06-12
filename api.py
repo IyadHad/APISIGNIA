@@ -30,7 +30,7 @@ def upload_file():
             return render_template('index.html', error=f'Error: {str(e)}')
     return render_template('index.html')
 
-@app.route('/<signe_predit>',methods = ['post'])
+@app.route('/predict',methods = ['post'])
 def res(signe_predit):
     error = request.args.get('error', None)
     return render_template('result.html', signe_predit=signe_predit, error=error)   
