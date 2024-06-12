@@ -1,8 +1,7 @@
 {
-  "pythonVersion": "3.9",
   "builds": [
     {
-      "src": "wsgi.py",
+      "src": "api.py",
       "use": "@vercel/python"
     },
     {
